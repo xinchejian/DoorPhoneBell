@@ -58,7 +58,7 @@ void setup()
   pinMode(wakePin, INPUT);
   pinMode(12, INPUT);
   digitalWrite(12, HIGH); 
-  attachInterrupt(0, wakeUpNow, LOW); // use interrupt 0 (pin 2) and run function
+  attachInterrupt(0, wakeUpNow, HIGH); // use interrupt 0 (pin 2) and run function
                                       // wakeUpNow when pin 2 gets LOW 
 }
 
