@@ -58,7 +58,7 @@ void setup()
   pinMode(wakePin, INPUT);
   pinMode(12, INPUT);
   digitalWrite(12, HIGH); 
-  attachInterrupt(0, wakeUpNow, HIGH); // use interrupt 0 (pin 2) and run function
+  attachInterrupt(1, wakeUpNow, HIGH); // use interrupt 0 (pin 2) and run function
                                       // wakeUpNow when pin 2 gets LOW 
 }
 
@@ -102,10 +102,10 @@ void playTone() {
     tone(8, melody[thisNote],noteDuration);
     
     // Breaking off if the phone is off hook
-    if(digitalRead(12)) {
+    /*if(digitalRead(12)) {
       delay(5000);
       break;
-    }
+    }*/
     
     // to distinguish the notes, set a minimum time between them.
     // the note's duration + 30% seems to work well:
