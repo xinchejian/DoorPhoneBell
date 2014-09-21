@@ -86,8 +86,8 @@ void sleepNow()         // here we put the arduino to sleep
 
 void loop()
 {
-  sleepNow();     // sleep function called here
   playTone();
+  sleepNow();     // sleep function called here
 }
 
 
